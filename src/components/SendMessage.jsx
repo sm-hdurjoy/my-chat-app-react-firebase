@@ -3,12 +3,12 @@ import { auth, db } from "../firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 
 const style = {
-  form: `h-14 w-full flex text-xl absolute bottom-0`,
+  form: `h-14 max-w-[782px] w-full flex text-xl fixed bottom-0`,
   input: `w-full text-xl p-3 bg-gray-900 text-white outline-none border-none`,
   button: `w-[150px] bg-green-500`,
 };
 
-const SendMessage = ({scroll}) => {
+const SendMessage = ({ scroll }) => {
   const [messageInput, setMessageInput] = useState("");
 
   const sendMessage = async (event) => {
@@ -25,7 +25,7 @@ const SendMessage = ({scroll}) => {
       timestamp: serverTimestamp(),
     });
     setMessageInput("");
-    scroll.current.scrollIntoView({behavior: 'smooth'})
+    scroll.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (

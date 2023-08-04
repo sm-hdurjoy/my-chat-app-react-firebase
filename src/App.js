@@ -6,8 +6,8 @@ import { auth } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 const style = {
-  appContainer: `max-w-[782px mx-auto text-center`,
-  sectionContainer: `flex flex-col h-[90vh] bg-grey-100 mt-10 shadow-xl border relative`,
+  appContainer: `max-w-[782px] mx-auto text-center`,
+  sectionContainer: `flex flex-col h-[90vh] bg-grey-100 relative`,
 };
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         {/* Navbar */}
         <Navbar />
         {/* Chat Component */}
-        { user ? <Chat /> : null }
+        {user ? <Chat /> : null}
       </section>
     </div>
   );
